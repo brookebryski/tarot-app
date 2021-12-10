@@ -1,5 +1,6 @@
-package javapractice.tarotapp;
+package javapractice.tarotapp.MajorArcanaTests;
 
+import javapractice.tarotapp.MajorArcana.MajorArcanaValidator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

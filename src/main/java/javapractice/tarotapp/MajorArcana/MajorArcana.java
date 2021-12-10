@@ -1,6 +1,6 @@
-package javapractice.tarotapp;
+package javapractice.tarotapp.MajorArcana;
 
-public class MajorArcana implements IMajorArcana{
+public class MajorArcana implements IMajorArcana {
     public String generateTraits(String card) {
         switch (card) {
             case "the fool":

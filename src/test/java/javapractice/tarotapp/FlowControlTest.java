@@ -1,13 +1,16 @@
 package javapractice.tarotapp;
 
+import javapractice.tarotapp.MajorArcana.IMajorArcana;
+import javapractice.tarotapp.MajorArcana.IMajorArcanaValidator;
+import javapractice.tarotapp.MajorArcana.MajorArcana;
+import javapractice.tarotapp.MajorArcana.MajorArcanaValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class FlowControlTest {
-    private  IMajorArcanaValidator _majorArcanaValidator;
+    private IMajorArcanaValidator _majorArcanaValidator;
     private IMajorArcana _majorArcana;
     private IFlowControl _flowControl;
 

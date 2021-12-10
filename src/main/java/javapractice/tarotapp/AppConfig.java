@@ -1,8 +1,8 @@
 package javapractice.tarotapp;
 
+import javapractice.tarotapp.MajorArcana.MajorArcana;
+import javapractice.tarotapp.MajorArcana.MajorArcanaValidator;
 import org.springframework.context.annotation.Bean;
-
-import java.util.concurrent.Flow;
 
 public class AppConfig {
 

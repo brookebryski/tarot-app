@@ -1,6 +1,6 @@
-package javapractice.tarotapp;
+package javapractice.tarotapp.MajorArcana;
 
-import java.util.Locale;
+import javapractice.tarotapp.MajorArcana.IMajorArcanaValidator;
 
 public class MajorArcanaValidator implements IMajorArcanaValidator {
     public boolean isMajorArcana(String input) {

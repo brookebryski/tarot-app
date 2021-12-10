@@ -1,5 +1,8 @@
 package javapractice.tarotapp;
 
+import javapractice.tarotapp.MajorArcana.IMajorArcana;
+import javapractice.tarotapp.MajorArcana.IMajorArcanaValidator;
+
 public class FlowControl implements IFlowControl {
     private IMajorArcanaValidator _majorArcanaValidator;
     private IMajorArcana _majorArcana;
