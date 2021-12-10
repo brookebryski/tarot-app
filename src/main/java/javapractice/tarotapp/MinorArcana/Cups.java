@@ -1,6 +1,24 @@
 package javapractice.tarotapp.MinorArcana;
 
-public class Cups {
+public class Cups implements ICups {
+
+    private ISuitGetter _suitGetter;
+    private INumberOrCourtGetter _numberOrCourtGetter;
+
+    public Cups(INumberOrCourtGetter numberOrCourtGetter, ISuitGetter suitGetter) {
+        this._numberOrCourtGetter = numberOrCourtGetter;
+        this._suitGetter = suitGetter;
+    }
+
+    public String generateTraits() {
+        String card = _numberOrCourtGetter.getInput() + " " + _suitGetter.getInput();
+        switch (card) {
+            case "1 cups":
+                return "Love, new relationships, compassion, creativity.";
+            default:
+                return "Emotionally balanced, compassionate, diplomatic.";
+        }
+    }
     // Ace of Cups: "Love, new relationships, compassion, creativity."
     // 2 of Cups: "Unified love, partnership, mutual attraction."
     // 3 of Cups: "Celebration, friendship, creativity, collaborations."

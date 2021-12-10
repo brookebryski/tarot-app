@@ -1,5 +1,5 @@
 package javapractice.tarotapp.MinorArcana;
 
-public interface INumberGetter {
+public interface INumberOrCourtGetter {
     String getInput();
 }

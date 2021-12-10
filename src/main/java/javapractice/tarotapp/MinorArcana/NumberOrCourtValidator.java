@@ -1,6 +1,6 @@
 package javapractice.tarotapp.MinorArcana;
 
-public class NumberValidator {
+public class NumberOrCourtValidator {
     public boolean isValid(String input) {
         switch (input) {
             case "1":
@@ -13,6 +13,10 @@ public class NumberValidator {
             case "8":
             case "9":
             case "10":
+            case "page":
+            case "knight":
+            case "king":
+            case "queen":
                 return true;
             default:
                 return false;

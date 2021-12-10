@@ -1,5 +1,5 @@
 package javapractice.tarotapp.MinorArcana;
 
-public interface INumberValidator {
+public interface INumberOrCourtValidator {
     boolean isValid(String input);
 }
