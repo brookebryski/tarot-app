@@ -1,4 +1,5 @@
 package javapractice.tarotapp.MinorArcana;
 
-public class ISwords {
+public interface ISwords {
+    String generateTraits();
 }
