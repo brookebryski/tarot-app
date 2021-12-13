@@ -1,8 +1,11 @@
 package javapractice.tarotapp.MinorArcana;
 
+import java.util.Locale;
+
 public class NumberOrCourtValidator {
     public boolean isValid(String input) {
-        switch (input) {
+        String cleanInput = input.toLowerCase();
+        switch (cleanInput) {
             case "1":
             case "2":
             case "3":
