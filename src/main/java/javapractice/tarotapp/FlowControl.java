@@ -31,21 +31,38 @@ public class FlowControl implements IFlowControl {
         if(_majorArcanaValidator.isMajorArcana(input)) {
             String result = _majorArcana.generateTraits(input);
             System.out.println(result);
-        } else if (_numberOrCourtValidator.isValid(input) & (_suitValidator.isSuit(input))) {
+        } else if (_numberOrCourtValidator.isValid(input) && (_suitValidator.isSuit(input))) {
+            System.out.println("minor");
             if(input.contains("cups")) {
+                // print cups
+                System.out.println("cups");
                 String result = _cups.generateTraits();
                 System.out.println(result);
             } else if (input.contains("pentacles")) {
+                // print pentacles
+                System.out.println("pentacles");
                 String result = _pentacles.generateTraits();
                 System.out.println(result);
             } else if (input.contains("swords")) {
+                // print swords
+                System.out.println("swords");
                 String result = _swords.generateTraits();
                 System.out.println(result);
             } else {
+                // print wands
+                System.out.println("wands");
                 String result = _wands.generateTraits();
                 System.out.println(result);
             }
-        }
+            // print unexpected fallthrough
 
+        }
+        System.out.println("fell");
     }
 }
+
+// ask user major or minor arcana
+// major call major
+// minor call two get input methods once
+// case switch: determine suit, run generate traits
+// remove get inputs from classes
