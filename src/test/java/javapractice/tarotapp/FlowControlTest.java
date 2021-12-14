@@ -4,21 +4,39 @@ import javapractice.tarotapp.MajorArcana.IMajorArcana;
 import javapractice.tarotapp.MajorArcana.IMajorArcanaValidator;
 import javapractice.tarotapp.MajorArcana.MajorArcana;
 import javapractice.tarotapp.MajorArcana.MajorArcanaValidator;
+import javapractice.tarotapp.MinorArcana.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.*;
 
 class FlowControlTest {
+
     private IMajorArcanaValidator _majorArcanaValidator;
     private IMajorArcana _majorArcana;
+
+    private INumberOrCourtValidator _numberOrCourtValidator;
+    private ISuitValidator _suitValidator;
+    private ICups _cups;
+    private IPentacles _pentacles;
+    private ISwords _swords;
+    private IWands _wands;
+
     private IFlowControl _flowControl;
 
     @BeforeEach
     public void setup() {
         this._majorArcanaValidator = mock(MajorArcanaValidator.class);
         this._majorArcana = mock(MajorArcana.class);
-        this._flowControl = new FlowControl(_majorArcanaValidator, _majorArcana);
+
+        this._numberOrCourtValidator = mock(NumberOrCourtValidator.class);
+        this._suitValidator = mock(SuitValidator.class);
+        this._cups = mock(Cups.class);
+        this._pentacles = mock(Pentacles.class);
+        this._swords = mock(Swords.class);
+        this._wands = mock(Wands.class);
+
+        this._flowControl = new FlowControl(_majorArcanaValidator, _majorArcana, _numberOrCourtValidator, _suitValidator, _cups, _pentacles, _swords, _wands );
     }
 
     @Test

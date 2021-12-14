@@ -2,7 +2,7 @@ package javapractice.tarotapp.MinorArcana;
 
 import java.util.Locale;
 
-public class NumberOrCourtValidator {
+public class NumberOrCourtValidator implements INumberOrCourtValidator{
     public boolean isValid(String input) {
         String cleanInput = input.toLowerCase();
         switch (cleanInput) {
