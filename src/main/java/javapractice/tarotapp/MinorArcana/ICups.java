@@ -1,5 +1,5 @@
 package javapractice.tarotapp.MinorArcana;
 
 public interface ICups {
-    String generateTraits();
+    String generateTraits(String card);
 }

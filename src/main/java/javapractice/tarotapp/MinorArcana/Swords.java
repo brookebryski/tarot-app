@@ -1,16 +1,8 @@
 package javapractice.tarotapp.MinorArcana;
 
 public class Swords implements ISwords {
-    private ISuitGetter _suitGetter;
-    private INumberOrCourtGetter _numberOrCourtGetter;
 
-    public Swords(INumberOrCourtGetter numberOrCourtGetter, ISuitGetter suitGetter) {
-        this._numberOrCourtGetter = numberOrCourtGetter;
-        this._suitGetter = suitGetter;
-    }
-
-    public String generateTraits() {
-        String card = _numberOrCourtGetter.getInput() + " " +_suitGetter.getInput();
+    public String generateTraits(String card) {
         switch (card) {
             case "1 swords":
                 return "Breakthroughs, new ideas, mental clarity, success.";

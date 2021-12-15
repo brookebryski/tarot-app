@@ -1,17 +1,7 @@
 package javapractice.tarotapp.MinorArcana;
 
 public class Cups implements ICups {
-
-    private ISuitGetter _suitGetter;
-    private INumberOrCourtGetter _numberOrCourtGetter;
-
-    public Cups(INumberOrCourtGetter numberOrCourtGetter, ISuitGetter suitGetter) {
-        this._numberOrCourtGetter = numberOrCourtGetter;
-        this._suitGetter = suitGetter;
-    }
-
-    public String generateTraits() {
-        String card = _numberOrCourtGetter.getInput() + " " + _suitGetter.getInput();
+    public String generateTraits(String card) {
         switch (card) {
             case "1 cups":
                 return "Love, new relationships, compassion, creativity.";

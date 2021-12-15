@@ -1,78 +1,61 @@
 package javapractice.tarotapp.MinorArcanaTests;
 
 import javapractice.tarotapp.MinorArcana.*;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+
 
 public class PentaclesTest {
-    private ISuitGetter suitGetter;
-    private INumberOrCourtGetter numberOrCourtGetter;
-    private IPentacles pentacles;
-
-    @BeforeEach
-    public void startup() {
-        this.suitGetter = mock(SuitGetter.class);
-        this.numberOrCourtGetter = mock(NumberOrCourtGetter.class);
-
-        this.pentacles = new Pentacles(numberOrCourtGetter, suitGetter);
-    }
 
     @Test
-    public void given1PentaclesGetANewFinancialOrCareerOpportunityManifestationAbundance() {
+    public void given1PentaclesGetNewFinancialOrCareerOpportunityManifestationAbundance() {
+        Pentacles pentacles = new Pentacles();
         // Given: I am a user
-        when(suitGetter.getInput()).thenReturn("pentacles");
-        when(numberOrCourtGetter.getInput()).thenReturn("1");
+        String result = pentacles.generateTraits("1 pentacles");
         // When: I enter the suit pentacles, then the number 1
-        String result = pentacles.generateTraits();
+        assertEquals("A new financial or career opportunity, manifestation, abundance", result);
         // Then: I get back "A new financial or career opportunity, manifestation, abundance"
-        assertEquals("A new financial or career opportunity, manifestation, abundance.", result);
     }
 
     @Test
     public void given6PentaclesGetGivingReceivingSharingWealthGenerosityCharity() {
+        Pentacles pentacles = new Pentacles();
         // Given: I am a user
-        when(suitGetter.getInput()).thenReturn("pentacles");
-        when(numberOrCourtGetter.getInput()).thenReturn("6");
+        String result = pentacles.generateTraits("6 pentacles");
         // When: I enter the suit pentacles, then the number 6
-        String result = pentacles.generateTraits();
+        assertEquals("Giving, receiving, sharing wealth, generosity, charity", result);
         // Then: I get back "Giving, receiving, sharing wealth, generosity, charity"
-        assertEquals("Giving, receiving, sharing wealth, generosity, charity.", result);
     }
 
     @Test
     public void given10PentaclesGetWealthFinancialSecurityFamilyLongTermSuccessContribution() {
+        Pentacles pentacles = new Pentacles();
         // Given: I am a user
-        when(suitGetter.getInput()).thenReturn("pentacles");
-        when(numberOrCourtGetter.getInput()).thenReturn("10");
+        String result = pentacles.generateTraits("10 pentacles");
         // When: I enter the suit pentacles, then the number 10
-        String result = pentacles.generateTraits();
-        // Then: I get back "Wealth, financial security, family, long-term success, contribution."
         assertEquals("Wealth, financial security, family, long-term success, contribution.", result);
+        // Then: I get back "Wealth, financial security, family, long-term success, contribution."
     }
 
     @Test
     public void givenKnightPentaclesGetHardWorkProductivityRoutineConservatism() {
+        Pentacles pentacles = new Pentacles();
         // Given: I am a user
-        when(suitGetter.getInput()).thenReturn("pentacles");
-        when(numberOrCourtGetter.getInput()).thenReturn("knight");
+        String result = pentacles.generateTraits("knight pentacles");
         // When: I enter the suit pentacles, then the court knight
-        String result = pentacles.generateTraits();
-        // Then: I get back "Hard work, productivity, routine, conservatism."
         assertEquals("Hard work, productivity, routine, conservatism.", result);
+        // Then: I get back "Hard work, productivity, routine, conservatism."
     }
 
     @Test
     public void givenKingPentaclesGetWealthBusinessLeadershipSecurityDisciplineAbundance() {
+        Pentacles pentacles = new Pentacles();
         // Given: I am a user
-        when(suitGetter.getInput()).thenReturn("pentacles");
-        when(numberOrCourtGetter.getInput()).thenReturn("king");
+        String result = pentacles.generateTraits("king pentacles");
         // When: I enter the suit pentacles, then the court king
-        String result = pentacles.generateTraits();
-        // Then: I get back "Wealth, business, leadership, security, discipline, abundance."
         assertEquals("Wealth, business, leadership, security, discipline, abundance.", result);
+        // Then: I get back "Wealth, business, leadership, security, discipline, abundance."
     }
+
 }

@@ -2,16 +2,7 @@ package javapractice.tarotapp.MinorArcana;
 
 public class Pentacles implements IPentacles {
 
-    private ISuitGetter _suitGetter;
-    private INumberOrCourtGetter _numberOrCourtGetter;
-
-    public Pentacles(INumberOrCourtGetter numberOrCourtGetter, ISuitGetter suitGetter) {
-        this._numberOrCourtGetter = numberOrCourtGetter;
-        this._suitGetter = suitGetter;
-    }
-
-    public String generateTraits() {
-        String card = _numberOrCourtGetter.getInput() + " " + _suitGetter.getInput();
+    public String generateTraits(String card) {
         switch (card) {
             case "1 pentacles":
                 return "A new financial or career opportunity, manifestation, abundance.";

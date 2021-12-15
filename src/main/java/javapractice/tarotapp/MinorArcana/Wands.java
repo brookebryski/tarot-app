@@ -2,16 +2,7 @@ package javapractice.tarotapp.MinorArcana;
 
 public class Wands implements IWands {
 
-    private ISuitGetter _suitGetter;
-    private INumberOrCourtGetter _numberOrCourtGetter;
-
-    public Wands(INumberOrCourtGetter numberOrCourtGetter, ISuitGetter suitGetter) {
-        this._numberOrCourtGetter = numberOrCourtGetter;
-        this._suitGetter = suitGetter;
-    }
-
-    public String generateTraits() {
-        String card = _numberOrCourtGetter.getInput() + " " + _suitGetter.getInput();
+    public String generateTraits(String card) {
         switch (card) {
             case "1 wands":
                 return "Inspiration, new opportunities, growth, potential.";

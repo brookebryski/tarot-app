@@ -17,6 +17,8 @@ class FlowControlTest {
 
     private INumberOrCourtValidator _numberOrCourtValidator;
     private ISuitValidator _suitValidator;
+    private ISuitGetter _suitGetter;
+    private INumberOrCourtGetter _numberOrCourtGetter;
     private ICups _cups;
     private IPentacles _pentacles;
     private ISwords _swords;
@@ -31,12 +33,15 @@ class FlowControlTest {
 
         this._numberOrCourtValidator = mock(NumberOrCourtValidator.class);
         this._suitValidator = mock(SuitValidator.class);
+        this._numberOrCourtGetter = mock(NumberOrCourtGetter.class);
+        this._suitGetter = mock(SuitGetter.class);
+
         this._cups = mock(Cups.class);
         this._pentacles = mock(Pentacles.class);
         this._swords = mock(Swords.class);
         this._wands = mock(Wands.class);
 
-        this._flowControl = new FlowControl(_majorArcanaValidator, _majorArcana, _numberOrCourtValidator, _suitValidator, _cups, _pentacles, _swords, _wands );
+        this._flowControl = new FlowControl(_majorArcanaValidator, _majorArcana, _numberOrCourtValidator, _suitValidator,_numberOrCourtGetter, _suitGetter, _cups, _pentacles, _swords, _wands );
     }
 
     @Test
